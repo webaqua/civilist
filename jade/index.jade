@@ -26,12 +26,18 @@ html(lang='ru', class="no-js")
 		script loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" );
 		script loadCSS( "css/header.min.css?ver=1.0.0", false, "all" );
 		script loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );
+		script loadCSS( "css/font-awesome.min.css?ver=1.0.0", false, "all" );
+
+
+
 		// Load CSS End
 
 		// Load CSS Compiled without JS
 		noscript
 			link(rel='stylesheet', href='css/fonts.min.css')
 			link(rel='stylesheet', href='css/main.min.css')
+			link(rel='stylesheet', href='css/font-awesome.min.css')
+
 
 	body
 		.video-container
@@ -44,7 +50,8 @@ html(lang='ru', class="no-js")
 		.row.shapka.row--no-gutter
 			.col.col--10-of-12.col--centered
 				.col.col--9-of-12
-					.phone +7967-45-52, +7967-45-52
+					.phone
+						i(class="fa fa-phone-square") номер
 				.col.col--3-of-12
 					.nav_menu
 						ul
