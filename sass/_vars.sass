@@ -3,6 +3,7 @@
 $arose: #ff033e
 $chinaRed: #e34234
 $yellow: #EEC126
+$white: #fff
 //
 
 h1.home
@@ -14,8 +15,9 @@ h1.home
   .video-container
     display: none
   .phone
-    text-align: center
+    //text-align: center
     color: #fff
+    //padding: 10px
   //.nav_menu
     text-align: center
     color: $chinaRed
@@ -37,6 +39,9 @@ h1.home
     color: $chinaRed
     padding-right: 0em
     padding-top: 0em
+  img.logo
+    width: 150px
+    margin-top: 45px
 
 
 
@@ -50,16 +55,54 @@ h1.home
 
 .nav_menu
   //text-align: right
-  border: 1px solid black
+  border: 0px solid black
+  padding: 0px
   ul
     margin: 0
-    padding: 4px
+    padding: 0px
   li
-    display: inline
-    margin-right: 5px
-    border: 3px solid #000
-    padding: 3px
-    height: 100px
+    display: inline-block
+    margin-right: 0px
+    border-right: 2px solid #355b82
+    padding: 0px
+    text-align: center
+    vertical-align: middle
+    line-height: 30px
+    height: 75px
+    width: 9.7em
+    float: right
+    &:hover
+      background-color: #507994
+
+    span
+      display: block
+    i
+      font-size: 23px
+      margin-top: 6px
+      color: $white
+      line-height: 30px
+
+    a
+      font-size: 18px
+      text-decoration: none
+      color: $white
+      &:visited
+        color: $white
+
+
+
+
+
+
+  li.current
+    background-color: $yellow
+  i.current
+    color: #375e84
+  a.current
+    color: #375e84
+    &:visited
+      color: #375e84
+
 
 .row
     &.menus
@@ -69,6 +112,8 @@ h1.home
     &.sprite
     &.slider
     &.content
+
+
 
 .content
   background-color: #e6ebee
@@ -104,7 +149,7 @@ h1.home
   //color: $jeltiy
   text-align: left
 .logo
-  padding: 1em
+  padding: 15px
   width: 10em
 
 .slogan
@@ -117,7 +162,8 @@ h1.home
   //text-align: left
   //padding: 25px
   font-size: 24px
-  //color: $white
+  color: $white
+  padding: 15px
 
 
 .menus
@@ -143,7 +189,7 @@ h1.home
 
 .shapka
   @include linear-gradient(#5A81A2, #335980)
-  height: 82px
+  height: 77px
 
 .slider_image
   background: url(/img/sprite.png)

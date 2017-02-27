@@ -49,16 +49,30 @@ html(lang='ru', class="no-js")
 
 		.row.shapka.row--no-gutter
 			.col.col--10-of-12.col--centered
-				.col.col--9-of-12
+				.col.col--4-of-12
 					.phone
-						i(class="fa fa-phone-square") номер1
-				.col.col--3-of-12
+						i(class="fa fa-phone-square") номер
+						i(class="fa fa-phone-square") номер
+				.col.col--8-of-12
 					.nav_menu
 						ul
-							li меню
-							li меню
-							li меню
-							li меню
+							li
+								i(class="fa fa-suitcase")
+									span
+										a(href="#book-b") Квалификация
+							li
+								i(class="fa fa-balance-scale")
+									span
+										a(href="#book-b") Услуги
+							li
+								i(class="fa fa-user-circle")
+									span
+										a(href="#book-b") О нас
+							li.current
+								i.current(class="fa fa-suitcase")
+									span
+										a.current(href="#book-b") Главная
+
 
 		.row.menus.row--no-gutter
 			.col.col--10-of-12.col--centered
