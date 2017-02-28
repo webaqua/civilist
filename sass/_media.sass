@@ -1,19 +1,94 @@
 @import "bourbon"
 
+$arose: #ff033e
+$chinaRed: #e34234
+$yellow: #EEC126
+$white: #fff
+$primary: #213B4F
+$second: #5A81A2
+
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+	.shapka
+	  @include linear-gradient(#5A81A2, #335980)
+	  height: 60px
+
+	.phone
+		font-size: em(14px)
+
+	.nav_menu
+
+		li
+	 	 display: inline-block
+	  	margin-right: 0px
+	  	border-right: 2px solid #355b82
+	  	padding: 0px
+	  	text-align: center
+	  	vertical-align: middle
+	  	//line-height: 30px
+	  	height: 60px
+	  	width: 8em
+	  	float: right
+	  	&:hover
+	    	background-color: lighten($primary, 17%)
+
+	 	 span
+	    	display: block
+	  	i
+	    	font-size: em(18px)
+	    	margin-top: 6px
+	    	color: $white
+	    	line-height: 26px
+
+	 	 a
+	   	 font-size: 15px
+	   	 text-decoration: none
+	   	 color: $white
+
+
+
+
+
+
+
+  .row.sprite
+    background-image: none
+  img.home
+    //float: none
+    //width: 40px
+    display: flex
+    align-items: center
+    align: center
+
+	.video-container
+		display: none
+
+
+  .row.slider
+    height: 15em
+
+  .slogan
+    font-size: 2em
+
+    padding-right: 0em
+    padding-top: 0em
+  img.logo
+    width: 150px
+    margin-top: 45px
 
 
 /* Medium Devices, Desktops */
+
 @media only screen and (max-width : 992px)
 	/**/
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.phone
+		font-size: em(9px)
 
 	/*Disable Animation on Mobile Devices*/
 	.animated
@@ -39,7 +114,8 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	.phone
+		font-size: em(11px)
 
 
 /* Custom, iPhone Retina */
@@ -59,9 +135,10 @@
 	/**/
 
 
-/* Small Devices, Tablets */
+/* Тестировалось на samsung galaxy tab */
 @media only screen and (min-width : 768px)
-	/**/
+	.phone
+		font-size: em(15px)
 
 
 /* Medium Devices, Desktops */
