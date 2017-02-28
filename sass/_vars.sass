@@ -4,10 +4,12 @@ $arose: #ff033e
 $chinaRed: #e34234
 $yellow: #EEC126
 $white: #fff
+$primary: #213B4F
+$second: #5A81A2
 //
 
-h1.home
-  color: $chinaRed
+h1.slider
+  color: $white
   text-align: center
 
 //отключние видеофона, скошенной полосы
@@ -72,12 +74,12 @@ h1.home
     width: 9.7em
     float: right
     &:hover
-      background-color: #507994
+      background-color: lighten($primary, 17%)
 
     span
       display: block
     i
-      font-size: 23px
+      font-size: em(23px)
       margin-top: 6px
       color: $white
       line-height: 30px
@@ -98,10 +100,12 @@ h1.home
     background-color: $yellow
   i.current
     color: #375e84
+    font-size: 30px
   a.current
     color: #375e84
     &:visited
-      color: #375e84
+      color: #fff
+
 
 
 .row
@@ -161,7 +165,7 @@ h1.home
   //border: 1px solid black
   //text-align: left
   //padding: 25px
-  font-size: 24px
+  font-size: em(24px)
   color: $white
   padding: 15px
 
