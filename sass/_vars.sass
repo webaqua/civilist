@@ -11,6 +11,62 @@ $second: #5A81A2
 h1.slider
   color: $white
   text-align: center
+  font-size: em(30px)
+  margin-top: em(40px)
+
+
+
+.nav_menu
+  //text-align: right
+  border: 0px solid black
+  padding: 0px
+  ul
+    margin: 0
+    padding: 0px
+    
+  li
+    display: inline-block
+    margin-right: 0px
+    border-right: 2px solid #355b82
+    padding: 0px
+    text-align: center
+    vertical-align: middle
+    line-height: 30px
+    height: 75px
+    width: 9.7em
+    float: right
+    &:hover
+      background-color: lighten($primary, 17%)
+
+    span
+      display: block
+    i
+      font-size: em(23px)
+      margin-top: 6px
+      color: $white
+      line-height: 30px
+
+    a
+      font-size: 18px
+      text-decoration: none
+      color: $white
+      &:visited
+        color: $white
+
+
+  li.current
+    background-color: $yellow
+  i.current
+    color: #375e84
+    font-size: 30px
+  a.current
+    color: #375e84
+    &:visited
+      color: #fff
+
+
+
+
 
 //отключние видеофона, скошенной полосы
 @media screen and (max-width: 1000px)
@@ -45,66 +101,12 @@ h1.slider
     width: 150px
     margin-top: 45px
 
-
-
-
-
-
 .home
   //float: right
   width: 200px
   align: center
 
-.nav_menu
-  //text-align: right
-  border: 0px solid black
-  padding: 0px
-  ul
-    margin: 0
-    padding: 0px
-  li
-    display: inline-block
-    margin-right: 0px
-    border-right: 2px solid #355b82
-    padding: 0px
-    text-align: center
-    vertical-align: middle
-    line-height: 30px
-    height: 75px
-    width: 9.7em
-    float: right
-    &:hover
-      background-color: lighten($primary, 17%)
 
-    span
-      display: block
-    i
-      font-size: em(23px)
-      margin-top: 6px
-      color: $white
-      line-height: 30px
-
-    a
-      font-size: 18px
-      text-decoration: none
-      color: $white
-      &:visited
-        color: $white
-
-
-
-
-
-
-  li.current
-    background-color: $yellow
-  i.current
-    color: #375e84
-    font-size: 30px
-  a.current
-    color: #375e84
-    &:visited
-      color: #fff
 
 
 
@@ -155,20 +157,25 @@ h1.slider
 .logo
   padding: 15px
   width: 10em
+  float: left
 
 .slogan
-  font-size: 2em
+  font-size: em(30px)
   color: $yellow
+  float: left
 
 
 .phone
-  //border: 1px solid black
+  border: 1px solid black
   //text-align: left
   //padding: 25px
   font-size: em(24px)
   color: $white
   padding: 15px
 
+.menu-wrapper
+  border: 1px solid black
+  background-color: #000
 
 .menus
   //background-color: $vk2
