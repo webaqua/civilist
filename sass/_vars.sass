@@ -6,6 +6,7 @@ $yellow: #EEC126
 $white: #fff
 $primary: #213B4F
 $second: #5A81A2
+
 //
 
 h1.slider
@@ -57,12 +58,13 @@ h1.slider
   li.current
     background-color: $yellow
   i.current
-    color: #375e84
+    color: $yellow
     font-size: 30px
   a.current
-    color: #375e84
+    color: $yellow
+    font-weight: 600
     &:visited
-      color: #fff
+      color: $yellow
 
 
 
@@ -110,9 +112,10 @@ h1.slider
 
 .slogan_container
     h1
-    padding-left: 8em
+    /*padding-left: 8em*/
     padding-top: 2em
     width: 300px
+    float: left
     //border: 1px solid black
 .label1
   padding: 37px
@@ -136,9 +139,9 @@ h1.slider
   //padding: 25px
   font-size: em(24px)
   color: $white
-  padding: 15px
-
-
+  margin: 15px
+  i:first-child
+    padding-right: 20px!important
 
 .menus
   //background-color: $vk2
@@ -161,9 +164,21 @@ h1.slider
   z-index: 2
   //border-bottom: 100px solid #e6ebee
 
+.sprite-circle
+  width: em(200px)
+  i
+    line-height: 180px
+    font-size: 6em
+
+
+
 .shapka
-  @include linear-gradient(#5A81A2, #335980)
+  //@include linear-gradient(#5A81A2, #335980)
+  //background-color: #5F83A1
+  @include linear-gradient(#7395b1, #4d6f8b)
   height: 77px
+
+
 
 .slider_image
   background: url(/img/sprite.png)

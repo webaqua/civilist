@@ -37,6 +37,7 @@ html(lang='ru', class="no-js")
 			link(rel='stylesheet', href='css/fonts.min.css')
 			link(rel='stylesheet', href='css/main.min.css')
 			link(rel='stylesheet', href='css/font-awesome.min.css')
+			link(rel='stylesheet', href='app/libs/JQuery.mmenu/dist/css/jquery.mmenu.all.css')
 
 
 	body
@@ -54,34 +55,39 @@ html(lang='ru', class="no-js")
 						i(class="fa fa-phone-square") +7(727)987-65-43
 						i(class="fa fa-phone-square") +7(727)987-65-43
 				.col.col--8-of-12.col--m-3-of-4
+					.toggle-mnu.hidden-lg
 					.menu-wrapper
 						.nav_menu
 							ul
 								li
-									i(class="fa fa-suitcase")
-										span
-											a(href="#book-b") Квалификация
+									.button-vk.button-longshadow.button.button-raised(style="height:100%; width:100%;")
+										i(class="fa fa-suitcase")
+											span
+												a(href="#book-b") Квалификация
 								li
-									i(class="fa fa-balance-scale")
-										span
-											a(href="#book-b") Услуги
+									.button-vk.button-longshadow.button.button-raised(style="height:100%; width:100%;")
+										i(class="fa fa-balance-scale")
+											span
+												a(href="#book-b") Услуги
 								li
-									i(class="fa fa-user-circle")
-										span
-											a(href="#book-b") О нас
+									.button-vk.button-longshadow.button.button-raised(style="height:100%; width:100%;")
+										i(class="fa fa-user-circle")
+											span
+												a(href="#book-b") О нас
 								li.current
-									i.current(class="fa fa-home")
-										span
-											a.current(href="#book-b") Главная
+									.button-vk.button-longshadow.button.button-raised(style="height:100%; width:100%;")
+										i.current(class="fa fa-home")
+											span
+												a.current(href="#book-b") Главная
 
 
 		.row.menus.row--no-gutter
 			.col.col--10-of-12.col--centered
-				.col.col--1-of-12.col--m-1-of-4
+				.col.col--4-of-12.col--m-2-of-4
 					img.logo(src="/img/logo.png")
-				.col.col--11-of-12.col--m-3-of-4
 					.slogan_container
 						.slogan Юридическое бюро «Цивилист»
+				.col.col--8-of-12.col--m-2-of-4
 		.row.slider.row--no-gutter
 			.col.col--12-of-12
 				.col.col--6-of-12.col--centered
@@ -91,7 +97,11 @@ html(lang='ru', class="no-js")
 			.col.col--8-of-12.col--centered
 				.col.col--10-of-12
 				.col.col--2-of-12
-					img.home(src="/img/ico_home.png")
+					.col.col--8-of-12.col--d-last.sprite-circle
+						.button-vk.button-longshadow.button.button-circle(style="border: 10px solid #000; height:100%; width:100%;")
+							.button-vk.button-longshadow.button.button-circle(style="border: 10px solid #000; height:100%; width:100%;")
+								i(class="fa fa-balance-scale")
+
 					h1.home Заголовок
 		.row.content.row--no-gutter
 			.col.col--8-of-12.col--centered
