@@ -36,6 +36,19 @@ $(function() {
 
 	};
 
-	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
+	$("#my-menu").mmenu({
+		navbar:{
+			title : "Меню"
+		}
+	});
+
+	$(".mobile-mnu").click(function() {
+		var mobilemAPI = $("#my-menu").data("mmenu");
+		mobilemAPI.open();
+		var thiss = $(this).find(".toggle-mnu");
+		thiss.toggleClass("on");
+		$(".main-mnu").slideToggle();
+		return false;
+	});
 });
