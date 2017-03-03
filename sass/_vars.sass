@@ -93,10 +93,8 @@ h1.slider
 
 .content
   background-color: #e6ebee
-  height: 30em
 .content-box
   padding-top: 10em
-  text-align: right
 
 .box
 	border: 1px solid black
@@ -145,7 +143,12 @@ h1.slider
   margin: 15px
   i:first-child
     padding-right: 20px!important
-
+  i
+    font-size: em(30px)
+  span
+    vertical-align: middle
+    margin-left: 10px
+    font-size: em(18px)
 .menus
   //background-color: $vk2
   //height: 83px
@@ -196,3 +199,85 @@ h1.slider
   position: relative
   z-index: -3
   color: $arose
+
+#home
+  hr
+    background: url(/img/home.png) no-repeat top right
+    background-repeat: no-repeat
+    height: 14em
+    border-style: none
+    text-align: right
+
+#services h1
+  text-align: center
+
+#about
+  text-align: right
+  p
+    line-height: em(40px)
+
+#services
+  hr
+    background: url(/img/services.png)  top center
+    background-repeat: no-repeat
+    height: 10em
+    border-style: none
+#hyphen
+  text-align: left
+  list-style: none
+  line-height: em(40px)
+  li:before
+    content: "-"
+    position: relative
+    left: -5px
+
+.qualification-outer
+  margin-top: 15em
+  overflow: hidden
+  display: inline-block
+  .qualification-inner
+    padding-left: 0
+    width: 103vw
+    margin-left: -75px
+    -webkit-transform-origin: 100% 0
+    -webkit-transform: rotate(-5deg)
+    -ms-transform-origin: 100% 0
+    -ms-transform: rotate(-5deg)
+    transform-origin: 100% 0
+    transform: rotate(-5deg)
+    .qualification-back
+      //background: url(http://23eab9c1cfef5c03712d-f8d8026ecea9fc5e0dbba76b2f42f645.r29.cf1.rackcdn.com/overlay3.png)
+      display: block
+      -webkit-transform-origin: 100% 0
+      -webkit-transform: rotate(5deg)
+      -ms-transform-origin: 100% 0
+      -ms-transform: rotate(5deg)
+      transform-origin: 100% 0
+      transform: rotate(5deg)
+#qualification
+  h1
+    text-align: left
+    /*padding-top: 85px*/
+    color: #fff
+  ul
+    list-style: none
+    text-align: right
+    color: #fff
+    font-weight: 600
+    font-size: em(18px)
+footer
+  text-align: center
+  padding-bottom: em(30px)
+  span
+    color: #fff
+    font-weight: 600
+  a
+    color: #fff
+  ul
+    list-style: none
+    li
+      font-size: em(30px)
+      display: inline-block
+      padding: 5px 15px
+    li:last-child
+      padding-left: 15px !important

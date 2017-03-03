@@ -51,8 +51,10 @@ html(lang='ru', class="no-js")
 			.col.col--10-of-12.col--centered
 				.col.col--4-of-12.col--m-1-of-4
 					.phone
-						i(class="fa fa-phone-square") +7(727)987-65-43
-						i(class="fa fa-phone-square") +7(727)987-65-43
+						i(class="fa fa-phone-square")
+							span +7(727)987-65-43
+						i(class="fa fa-envelope-square")
+							span info@sds.kz
 				.col.col--8-of-12.col--m-3-of-4
 					.menu-wrapper
 						nav#my-menu
@@ -104,23 +106,72 @@ html(lang='ru', class="no-js")
 						ХОРОШИЙ АДВОКАТ ВЫИГРЫВАЕТ В ПРОЦЕССЕ; -ОЧЕНЬ ХОРОШИЙ — ДО ПРОЦЕССА.
 		.row.sprite.row--no-gutter
 			.col.col--8-of-12.col--centered
-				.col.col--10-of-12
-				.col.col--2-of-12
-					.col.col--8-of-12.col--d-last.sprite-circle
-						.button-vk.button-longshadow.button.button-circle(style="border: 10px solid #000; height:100%; width:100%;")
-							.button-vk.button-longshadow.button.button-circle(style="border: 10px solid #000; height:100%; width:100%;")
-								i(class="fa fa-balance-scale")
-
-					h1.home Заголовок
+					#home
+						hr
 		.row.content.row--no-gutter
 			.col.col--8-of-12.col--centered
-				.content-box
+				#about.content-box
+					h1 О нас
 					p с 1997 года занимаюсь занимаюсь юридической практикой и оказываю юридические услуги на профессиональном уровне. Основываясь на имеющемся опыты утверждаю, что при наступлении  сложной правовой ситуации, когда нет возможности самостоятельно урегулировать возникшие проблемы то путь один — обращаться к специалистам в данном вопросе. Ведь только специалист всесторонне изучит и оценит ситуацию, определит стратегию дальнейших действий. Кроме того, даю консультацию относительно исхода дела в той или иной ситуации, для принятия правильного и целесообразного решения по возникшей проблеме.
-
-
-
-
-
+				#services(style="margin-top: 15em")
+					hr
+					h1 Услуги
+					ol#hyphen
+						b Для выполнения такого рода задач занимаюсь решением правовых проблем по следующей специализации:
+						li
+							span консультации, в том числе  дистанционно, при возникновении спорных моментов в предпринимательстве;
+						li
+							span судебный процесс, в том числе по взысканию долгов;
+						li
+							span участие в ведении переговоров;
+						li
+							span консультации по гражданскому праву, включая корпоративные споры;
+						li
+							span юридические заключения по вопросам, возникающим в ходе ведения коммерческой деятельности;
+						li
+							span экономические (финансово-хозяйственные) споры;
+						li
+							span обжалование действий/бездействия в судебном порядке;
+						li
+							span вопросы реорганизации, слияния и поглощения;
+						li
+							span процедуры банкротства и реабилитации (санации);
+						li
+							span споры, вытекающие из взаимоотношений с кредиторами (банками), государственными органами и должностными лицами;
+						li
+							span представление интересов компаний не резидентов на территории Казахстана.
+			.row.content.row--no-gutter
+				.col.col--12-of-12.qualification-outer
+					.col.col--12-of-12.qualification-inner
+						.video-container
+							.video-pattern
+								video.forvidos(autoplay loop width="auto")
+									source(src="http://trdcompany.kz/blue.mp4" type="video/mp4")
+						.row.row--no-gutter.qualification-back
+							.col.col--8-of-12.col--centered
+								#qualification
+									img(src="/img/qualification.png")
+									h1 Квалификация
+									ul
+										li 1. диплом о высшем юр. Образовании (диплом).
+										li 2. аукционист  (сертификат)
+										li 3. конкурсный управляющий (квалификационное свидетельство).
+										li 4. деятельность по управлению имуществом и делами неплатежеспособных должников в процедурах банкротства (лицензия)
+										li 5. адвокат (лицензия)
+										li 6. реабилитационный и банкротный управляющий (сертификат)
+										li 7. руководитель юридической службы/корпоративный юрист (сертификат)
+							footer.content-box
+								ul
+									li
+										a(href="")
+											i(class="fa fa-vk")
+									li
+										a(href="")
+											i(class="fa fa-facebook")
+									li
+										a(href="")
+											i(class="fa fa-twitter")
+								span copyright 2017 Privacy Policy
 
 
 
