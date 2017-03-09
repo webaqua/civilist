@@ -115,7 +115,7 @@ h1.slider
     h1
     /*padding-left: 8em*/
     padding-top: 2em
-    width: 300px
+    width: 30%
     float: left
     //border: 1px solid black
 .label1
@@ -160,12 +160,10 @@ h1.slider
   //top : 0
   //left: 0
 .sprite
-
-  background-color: #213B4F
-  height: 165px
-  background: url(/img/sprite.png)
-  background-repeat: no-repeat
-  background-size: 115%
+  //background-color: #213B4F
+  height: 22vh
+  background: url(/img/sprite.png) no-repeat
+  background-size: cover
   position: relative
   z-index: 2
   //border-bottom: 100px solid #e6ebee
@@ -186,19 +184,22 @@ h1.slider
 
 
 
-.slider_image
-  background: url(/img/sprite.png)
-  background-repeat: no-repeat
-  background-size: 100%
-  position: relative
-  z-index: 2
+// .slider_image
+//   background: url(/img/sprite.png)
+//   background-repeat: no-repeat
+//   background-size: 100%
+//   position: relative
+//   z-index: 2
 
 
-.slider
-  height: 25em
-  position: relative
-  z-index: -3
-  color: $arose
+// .slider
+//   height: 25em
+//   position: relative
+//   z-index: -3
+//   color: $arose
+
+#home, #about
+  -webkit-margin-end: 1em
 
 #home
   hr
@@ -227,17 +228,21 @@ h1.slider
   list-style: none
   line-height: em(40px)
   li:before
-    content: "-"
+    content: ""
     position: relative
     left: -5px
 
+.qualification-outer::after
+  content: ''
+  width: 100%
+  display: table
+
 .qualification-outer
-  margin-top: 15em
   overflow: hidden
   display: inline-block
   .qualification-inner
     padding-left: 0
-    width: 103vw
+    width: 107vw
     margin-left: -80px
     -webkit-transform-origin: 100% 0
     -webkit-transform: rotate(-5deg)
@@ -269,12 +274,41 @@ h1.slider
     text-align: right
     color: #fff
     font-weight: 600
+    line-height: 30px
     font-size: em(18px)
+    input
+      text-decoration:none
+      text-align:center
+      -webkit-margin-end: 1em
+      -webkit-margin-before: .5em
+      cursor: pointer
+      border: 2px solid #213B4F
+      background: #E9C31F
+      color: #213B4F
+      font-size: em(14px)
+      font-weight: bold
+      padding-top: 11px
+      padding-right: 35px
+      padding-bottom: 11px
+      padding-left: 35px
+      -webkit-border-radius: 4px
+      -moz-border-radius: 4px
+      border-radius: 4px
     li
       -webkit-margin-end: 1em
+      -webkit-margin-before: .5em
+.footer
+  background-color: #e6ebee
 footer
   text-align: center
   padding-bottom: em(30px)
+  .sert
+    ul
+      display: inline-block
+      img
+        width: 15%
+        margin: 0 10px 10px 0
+        vertical-align: top
   span
     color: #fff
     font-weight: 600

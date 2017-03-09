@@ -47,14 +47,8 @@ $second: #5A81A2
 	   	 text-decoration: none
 	   	 color: $white
 
-
-
-
-
-
-
   .row.sprite
-    background-image: none
+
   img.home
     //float: none
     //width: 40px
@@ -63,9 +57,12 @@ $second: #5A81A2
     align: center
 
 	.video-container
+		background: #213B4F
+
+	.video-pattern
 		display: none
-
-
+	//
+	//
   .row.slider
     height: 15em
 
@@ -163,6 +160,16 @@ $second: #5A81A2
 @media only screen and (min-width : 1199px)
 	.hidden-lg
 		display: none !important
+	.qualification-inner
+    width: 105vw !important
+
+@media only screen and (min-width : 1366px)
+	.qualification-inner
+    width: 110vw !important
+    margin-left: -130px !important
+	#qualification
+		margin-left: 140px
+
 
 @media only screen and (max-width: 1200px)
 	.phone
