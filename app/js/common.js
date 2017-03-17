@@ -1,6 +1,6 @@
 
 $(function() {
-	// 
+	//
 	// //SVG Fallback
 	// if(!Modernizr.svg) {
 	// 	$("img[src*='svg']").attr("src", function() {
@@ -36,6 +36,31 @@ $(function() {
 	//
 	// };
 
+	!function($){
+	$(document).on('click', 'a[href^="#"]', function () {
+	$('html, body').animate({ scrollTop:  $('a[name="'+this.hash.slice(1)+'"]').offset().top }, 1000 );
+	return false;
+	});
+	}(jQuery);
+
+		// Fix a bug with Chrome where HTML5 autoplay videos stop when the DOM
+	// around them is manipulated.
+	var $video = $('video[autoplay]'),
+	  videoElement = $video[0],
+		videoElement2 = $video[1];
+	// Attach an event listener to trigger the video.
+	$video.on('canplaythrough', function() {
+	  this.play();
+	});
+	// Check the readystate of the video as sometimes it fires the
+	// canplaythrough event before we've attached our listener.
+	if (videoElement.readyState > 3) {
+	  videoElement.play();
+	}
+	if (videoElement2.readyState > 3) {
+	  videoElement.play();
+	}
+
 	var glide = $('.slider').glide().data('api_glide');
 	$(window).on('keyup', function (key) {
 	if (key.keyCode === 13) {
@@ -60,4 +85,10 @@ $(function() {
 		$(".main-mnu").slideToggle();
 		return false;
 	});
+
+
+	setTimeout(function() {
+ 	 $('.preloader').fadeOut('slow', function() {});
+ }, 1000);
+
 });

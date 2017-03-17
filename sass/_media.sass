@@ -56,11 +56,9 @@ $second: #5A81A2
     align-items: center
     align: center
 
-	.video-container
-		background: #213B4F
 
-	.video-pattern
-		display: none
+
+
 	//
 	//
   .row.slider
@@ -113,66 +111,120 @@ $second: #5A81A2
 @media only screen and (max-width : 480px)
 	.phone
 		font-size: em(11px)
+	.btn
+		display: none
 
-
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-	/**/
-
-
-/*==========  Mobile First Method  ==========*/
-
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px)
-	/**/
-
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px)
-	.mobile-mnu
-		padding: 0 !important
+@media only screen and (max-width: 1401px)
 	.phone
-		font-size: em(8px)
-		i
-			margin: 5px 0 !important
-			padding: 0 0 0 5px !important
-			span
-				font-size: 0.8em !important
+		font-size: em(10px)
+		margin-top: em(14px)
+		margin-bottom: em(14px)
+	.qualification-back
+		width: 106vw
+	#qualification
+		hr, h1
+			margin-left: 120px
 
-
-/* Тестировалось на samsung galaxy tab */
-@media only screen and (min-width : 768px)
-	.phone
-		font-size: em(8px)
-		i
-			margin: 5px 0 !important
-			padding: 0 0 0 5px !important
-			span
-				font-size: 1em
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-	/**/
-
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1199px)
-	.hidden-lg
-		display: none !important
-	.qualification-inner
-    width: 105vw !important
-
-@media only screen and (min-width : 1366px)
-	.qualification-inner
-    width: 110vw !important
-    margin-left: -130px !important
+@media only screen and (max-width : 1366px)
+	.qualification-back
+		width: 110vw
+	#qualification
+		ul
+			-webkit-margin-end: 4em
+			margin-inline-end: 4em
+@media only screen and (max-width : 1280px)
+	.video-container
+		background: #213B4F
+		.video-pattern
+			display: none
+	// .phone
+	// 	margin: 0
+		// font-size: em(12px)
+		hr
+			-webkit-margin-end: 0
+			margin-inline-end: 0
+	#about
+		h1
+			text-align: center
+		p
+			text-align: center
+	#hyphen
+		text-align: center
 	#qualification
 		margin-left: 140px
-
+		hr, h1
+			margin-left: 0
+		h1, ul
+			text-align: center
 
 @media only screen and (max-width: 1200px)
-	.phone
-		margin: 0 !important
 	.nav_menu
-		display: none !important
+		display: none
+
+@media only screen and (max-width : 991px)
+	.qualification-row
+		margin-left: -85px
+		.qualification-back
+			width: 115vw
+
+	.phone
+		// margin-top: em(20px)
+		// margin-bottom: em(20px)
+		// margin-left: em(20px)
+		// margin-right: em(20px)
+		font-size: em(8px)
+	#qualification
+		background-size: 25%
+
+@media only screen and (max-width : 768px)
+	#qualification
+		margin-left: 85px
+		ul, input, li
+			-webkit-margin-end: em(40px)
+			margin-inline-end: em(40px)
+	.qualification-row
+		margin-left: -100px
+	.phone
+		margin: 0
+		i
+			margin: 5px 0
+			padding: 0 0 0 5px
+			span
+				font-size: em(10px)
+	#qualification
+		hr
+			background-size: 30%
+	header
+		min-height: 100%
+
+@media only screen and (max-width : 480px)
+	.mobile-mnu
+		padding: 0
+	.phone
+		i
+			margin: 5px 0
+			padding: 0 0 0 5px
+			span
+				font-size: 0.8em !important
+	.qualification-row
+		margin-left: -120px
+		.qualification-back
+			width: 130vw
+			#qualification
+				margin-left: 85px
+				hr
+					margin-left: 40px
+				ul, input, li
+					-webkit-margin-end: 1em
+					margin-inline-end: 1em
+
+	.slogan_container
+		width: 100%
+		text-align: center
+	.logo
+		width: 17em
+@media only screen and (max-width : 333px)
+
+@media only screen and (min-width : 1201px)
+	.hidden-lg
+		display: none

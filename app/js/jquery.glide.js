@@ -8,17 +8,17 @@
  * Licensed under the MIT license
  */
 ;(function ($, window, document, undefined) {
-	
+
 	var name = 'glide',
 		defaults = {
-			
+
 			// {Int or Bool} False for turning off autoplay
 			autoplay: 4000,
 			// {Bool} Pause autoplay on mouseover slider
 			hoverpause: true,
-			
+
 			/**
-			 * Animation time 
+			 * Animation time
 			 * !!! IMPORTANT !!!
 			 * That option will be use only, when css3 are not suported
 			 * If css3 are supported animation time is set in css declaration inside .css file
@@ -77,7 +77,7 @@
 			beforeTransition: function() {},
 			// {Function} Callback after slide change
 			afterTransition: function() {}
-		
+
 		};
 
 	/**
@@ -86,7 +86,7 @@
 	 * @param {Object} options
 	 */
 	function Glide(parent, options) {
-		
+
 		// Cache this
 		var _ = this;
 		// Extend options
@@ -169,7 +169,7 @@
 
 		// Returning API
 		return {
-			
+
 			/**
 			 * Get current slide number
 			 * @return {Int}
@@ -210,7 +210,7 @@
 
 			/**
 			 * Jump to specifed slide
-			 * @param  {Int}   	  distance 
+			 * @param  {Int}   	  distance
 			 * @param  {Function} callback
 			 */
 			jump: function(distance, callback) {
@@ -219,7 +219,7 @@
 
 			/**
 			 * Append navigation to specifet target
-			 * @param  {Mixed} target 
+			 * @param  {Mixed} target
 			 */
 			nav: function(target) {
 				/**
@@ -254,17 +254,17 @@
 			}
 
 		};
-	
+
 	}
 
 	/**
 	 * Building slider DOM
 	 */
 	Glide.prototype.build = function() {
-		
+
 		// Cache this
 		var _ = this;
-		
+
 		/**
 		 * Arrows
 		 * If option is true and there is more than one slide
@@ -278,7 +278,7 @@
 		 * Append navigation item for each slide
 		 */
 		if (_.options.nav) _.navigation();
-	
+
 	};
 
 	/**
@@ -288,8 +288,8 @@
 
 		// Cache this
 		var _ = this;
-
-		if (_.slides.length > 1) {
+		console.log(_.slides.length);
+		if (this.slides.length > 1) {
 			// Setup variables
 			var o = _.options,
 				/**
@@ -323,10 +323,10 @@
 
 			// Setup variables
 			var navChildren = nav.children();
-			
+
 			// Add navCurrentItemClass to the first navigation item
 			navChildren.eq(0).addClass(o.navCurrentItemClass);
-			
+
 			// If centered option is true
 			if (o.navCenter) {
 				// Center bullet navigation
@@ -349,7 +349,7 @@
 				_.slide( $(this).data('distance'), true );
 			});
 		}
-	
+
 	};
 
 	/**
@@ -359,7 +359,7 @@
 
 		// Cache this
 		var _ = this;
-		
+
 		if (_.slides.length > 1) {
 			// Setup variables
 			var o = _.options,
@@ -409,7 +409,7 @@
 				_.slide( $(this).data('distance'), false );
 			});
 		}
-	
+
 	};
 
 
@@ -433,7 +433,7 @@
 		// Callbacks before slide change
 		_.options.beforeTransition.call(_);
 
-		// Setup variables 
+		// Setup variables
 		var	currentSlide = (jump) ? 0 : _.currentSlide,
 			slidesLength = -(_.slides.length-1),
 			navCurrentClass = _.options.navCurrentItemClass,
@@ -462,11 +462,11 @@
 		if (_.CSS3support) {
 			// Croping by increasing/decreasing slider wrapper translate
 			_.wrapper.css({
-				'-webkit-transform': 'translate3d(' + translate + ', 0px, 0px)', 
-				   '-moz-transform': 'translate3d(' + translate + ', 0px, 0px)', 
-				    '-ms-transform': 'translate3d(' + translate + ', 0px, 0px)', 
-				     '-o-transform': 'translate3d(' + translate + ', 0px, 0px)', 
-				        'transform': 'translate3d(' + translate + ', 0px, 0px)' 
+				'-webkit-transform': 'translate3d(' + translate + ', 0px, 0px)',
+				   '-moz-transform': 'translate3d(' + translate + ', 0px, 0px)',
+				    '-ms-transform': 'translate3d(' + translate + ', 0px, 0px)',
+				     '-o-transform': 'translate3d(' + translate + ', 0px, 0px)',
+				        'transform': 'translate3d(' + translate + ', 0px, 0px)'
 			});
 		// Else use $.animate()
 		} else {
@@ -486,7 +486,7 @@
 
 		// Update current slide globaly
 		_.currentSlide = currentSlide;
-		
+
 		// Callbacks after slide change
 		_.options.afterTransition.call(_);
 		if ( (callback !== 'undefined') && (typeof callback === 'function') ) callback();
@@ -496,7 +496,7 @@
 		 * After slide
 		 */
 		_.play();
-	
+
 	};
 
 	/**
@@ -543,7 +543,7 @@
 	 * Change sildes on swipe event
 	 */
 	Glide.prototype.swipe = function() {
-		
+
 		// Setup variables
 		var _ = this,
 			touch,
@@ -568,7 +568,7 @@
 		_.parent.on('touchstart', function(e) {
 			// Cache event
 			touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-			
+
 			// Get touch start points
 			touchStartX = touch.pageX;
 			touchStartY = touch.pageY;
@@ -594,7 +594,7 @@
 			powEX = Math.abs( subExSx << 2 );
 			// Bitwise subEySy pow
 			powEY = Math.abs( subEySy << 2 );
-			
+
 			// Calculate the length of the hypotenuse segment
 			touchHypotenuse = Math.sqrt( powEX + powEY );
 			// Calculate the length of the cathetus segment
@@ -613,7 +613,7 @@
 		_.parent.on('touchend', function(e) {
 			// Cache event
 			touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-			
+
 			// Calculate touch distance
 			touchDistance = touch.pageX - touchStartX;
 
@@ -627,7 +627,7 @@
 				_.slide(1);
 			}
 		});
-	
+
 	};
 
 	/**
@@ -636,9 +636,9 @@
 	 * Set animation type
 	 */
 	Glide.prototype.init = function() {
-		
+
 		// Cache this
-		var _ = this,	
+		var _ = this,
 			// Get sidebar width
 			sliderWidth = _.parent.width();
 			// Get slide width
@@ -651,7 +651,7 @@
 
 		// If CSS3 Transition isn't supported switch CSS3support variable to false and use $.animate()
 		if ( !isCssSupported("transition") || !isCssSupported("transform") ) _.CSS3support = false;
-	
+
 	};
 
 	/**
@@ -660,7 +660,7 @@
 	 * @return {Boolean}
 	 */
 	function isCssSupported(declaration) {
-		
+
 		var isSupported = false,
 			prefixes = 'Khtml ms O Moz Webkit'.split(' '),
 			clone = document.createElement('div'),
@@ -682,7 +682,7 @@
 			if (window.opera.version() < 13) isSupported = false;
 		}
 
-		
+
 		return isSupported;
 
 	}
@@ -696,7 +696,7 @@
 				);
 			}
 		});
-		
+
 	};
 
 })(jQuery, window, document);

@@ -71,7 +71,7 @@ z-index: 10;
 display: block;
 visibility: hidden;
 margin: 0 auto;
-width: 90%;
+width: 95%;
 min-width: 220px;
 /*max-width: 600px;*/
 /* фиксированное позиционирование, окно стабильно при прокрутке */
@@ -109,7 +109,7 @@ transition: all ease .5s;
 }
 
 .overlay:target+.popup {
-top: 10%;
+top: 5%;
 visibility: visible !important;
 opacity: 1;
 }

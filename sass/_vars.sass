@@ -9,7 +9,7 @@ $second: #5A81A2
 
 //
 
-h1.slider
+h1.slider1
   color: $white
   text-align: center
   font-size: em(30px)
@@ -56,6 +56,8 @@ h1.slider
       color: $white
       &:visited
         color: $white
+      &:hover
+        text-decoration: underline
 
 
   li.current
@@ -89,10 +91,34 @@ h1.slider
     &.slider
     &.content
 
+a.btn
+  background: url(/img/totop.png) no-repeat
+  background-repeat: no-repeat
+  width: 100px
+  height: 100px
+  cursor: pointer
+  -webkit-border-radius: 45px
+  -moz-border-radius: 45px
+  border-radius: 45px
+  font-family: Arial
+  color: #ffffff
+  font-size: 20px
+  text-decoration: none
+  position: fixed
+  bottom: 0
+  right: 0
+  margin: 40px
+  z-index: 10
+  opacity: .8
 
+a.btn:hover
+  background: url(/img/subtotop.png)
+  text-decoration: none
+  opacity: .9
 
 .content
   background-color: #e6ebee
+
 .content-box
   padding-top: 10em
 
@@ -112,11 +138,10 @@ h1.slider
   &.shapka
 
 .slogan_container
+    width: 100%
     h1
     /*padding-left: 8em*/
     padding-top: 2em
-    width: 30%
-    float: left
     //border: 1px solid black
 .label1
   padding: 37px
@@ -135,12 +160,15 @@ h1.slider
 
 
 .phone
-  border: 1px solid black
+  // border: 1px solid black
   //text-align: left
   //padding: 25px
-  font-size: em(24px)
+  font-size: em(12px)
   color: $white
-  margin: 15px
+  margin-top: em(25px)
+  margin-bottom: em(25px)
+  margin-left: em(10px)
+  margin-right: em(10px)
   i:first-child
     padding-right: 20px!important
   i
@@ -148,14 +176,15 @@ h1.slider
   span
     vertical-align: middle
     margin-left: 10px
-    font-size: em(18px)
+    font-size: em(14px)
 .menus
+  overflow: hidden
   //background-color: $vk2
   //height: 83px
-  border: 0px solid black
-  text-align: center
-  background-color: #5A81A2
-  height: 12em
+  // border: 0px solid black
+  // text-align: center
+  // background-color: #5A81A2
+  // height: 12em
   background-color: rgba(90, 129, 162, 0.8)
   //top : 0
   //left: 0
@@ -173,30 +202,11 @@ h1.slider
   i
     line-height: 180px
     font-size: 6em
-
-
-
 .shapka
   //@include linear-gradient(#5A81A2, #335980)
   //background-color: #5F83A1
   @include linear-gradient(#7395b1, #4d6f8b)
   height: 77px
-
-
-
-// .slider_image
-//   background: url(/img/sprite.png)
-//   background-repeat: no-repeat
-//   background-size: 100%
-//   position: relative
-//   z-index: 2
-
-
-// .slider
-//   height: 25em
-//   position: relative
-//   z-index: -3
-//   color: $arose
 
 #home, #about
   -webkit-margin-end: 1em
@@ -204,33 +214,46 @@ h1.slider
 #home
   hr
     background: url(/img/home.png) no-repeat top right
+    background-size: 16%
     background-repeat: no-repeat
     height: 14em
     border-style: none
     text-align: right
 
-#services h1
-  text-align: center
-
 #about
   text-align: right
   p
-    line-height: em(40px)
+    line-height: 50px
 
 #services
+  h1
+    text-align: center
   hr
     background: url(/img/services.png)  top center
     background-repeat: no-repeat
     height: 10em
     border-style: none
 #hyphen
+  margin: auto
   text-align: left
   list-style: none
-  line-height: em(40px)
+  line-height: 50px
   li:before
-    content: ""
+    content: ''
     position: relative
     left: -5px
+
+header
+    position: relative
+    //min-height: auto
+    // text-align: center
+    color: #fff
+    width: 100%
+    background-position: center
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    background-size: cover
+    -o-background-size: cover
 
 .qualification-outer::after
   content: ''
@@ -239,31 +262,46 @@ h1.slider
 
 .qualification-outer
   overflow: hidden
-  display: inline-block
-  .qualification-inner
-    padding-left: 0
-    width: 107vw
-    margin-left: -80px
-    -webkit-transform-origin: 100% 0
-    -webkit-transform: rotate(-5deg)
-    -ms-transform-origin: 100% 0
-    -ms-transform: rotate(-5deg)
-    transform-origin: 100% 0
-    transform: rotate(-5deg)
-    .qualification-back
-      //background: url(http://23eab9c1cfef5c03712d-f8d8026ecea9fc5e0dbba76b2f42f645.r29.cf1.rackcdn.com/overlay3.png)
-      display: block
+  max-width: 100%
+.qualification-inner
+  //background: url(http://23eab9c1cfef5c03712d-f8d8026ecea9fc5e0dbba76b2f42f645.r29.cf1.rackcdn.com/overlay3.png)
+  padding-left: 0
+.qualification-row
+  margin-left: -85px
+.qualification-back
+  width: 110vw
+  display: block
+  -webkit-transform-origin: 100% 0
+  -webkit-transform: rotate(-5deg)
+  -ms-transform-origin: 100% 0
+  -ms-transform: rotate(-5deg)
+  transform-origin: 100% 0
+  transform: rotate(-5deg)
+  .video-container
+    .forvidos
+      width: 125%
       -webkit-transform-origin: 100% 0
       -webkit-transform: rotate(5deg)
       -ms-transform-origin: 100% 0
       -ms-transform: rotate(5deg)
       transform-origin: 100% 0
       transform: rotate(5deg)
+    // background: transparent
+.qualification-content
+  -webkit-transform-origin: 100% 0
+  -webkit-transform: rotate(5deg)
+  -ms-transform-origin: 100% 0
+  -ms-transform: rotate(5deg)
+  transform-origin: 100% 0
+  transform: rotate(5deg)
+
+
+
 #qualification
-  margin-left: 85px
   hr
     background: url(/img/qualification.png) top left no-repeat
-    height: 14em
+    background-size: 14%
+    height: 13em
     border-style: none
   h1
     text-align: left
@@ -274,8 +312,9 @@ h1.slider
     text-align: right
     color: #fff
     font-weight: 600
-    line-height: 30px
+    line-height: 40px
     font-size: em(18px)
+    -webkit-margin-end: 1em
     input
       text-decoration:none
       text-align:center
@@ -299,9 +338,18 @@ h1.slider
       -webkit-margin-before: .5em
 .footer
   background-color: #e6ebee
+  padding-top: 15em
+
+
 footer
   text-align: center
-  padding-bottom: em(30px)
+  padding-bottom: em(50px)
+  // -webkit-transform-origin: 100% 0
+  // -webkit-transform: rotate(5deg)
+  // -ms-transform-origin: 100% 0
+  // -ms-transform: rotate(5deg)
+  // transform-origin: 100% 0
+  // transform: rotate(5deg)
   .sert
     ul
       display: inline-block
@@ -316,8 +364,9 @@ footer
     color: #fff
   ul
     list-style: none
+    text-align: center !important
     li
-      font-size: em(30px)
+      font-size: em(24px)
       display: inline-block
       padding: 5px 15px
     li:last-child

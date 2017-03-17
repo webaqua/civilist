@@ -6,6 +6,7 @@
 @import "mmenu.sass"
 @import "modalwin"
 @import "slider"
+@import "preloader"
 
 //@import "tgrid"
 
@@ -15,7 +16,11 @@ body
 	position: relative
 	line-height: 1.6
 	font-family: "RobotoRegular", sans-serif
-	overflow-x: hidden
+
+body::after
+	content: ''
+	width: 100%
+	display: table
 
 .hidden
 	display: none
